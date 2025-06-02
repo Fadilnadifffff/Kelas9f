@@ -1,1 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galeri Foto Kelas 9F</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url('https://ibb.co/CKRDcPWb'); /* Replace with your desired image URL */
+      background-size: cover;
+      background-position: center;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: 700;
+      color: #222;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    /* Changed gallery layout to vertical column */
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 600px;
+      margin: 0 auto 40px auto;
+      flex-grow: 1;
+    }
+    .gallery-item {
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+      overflow: hidden;
+      background: white;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .gallery-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 32px rgba(0,0,0,0.22);
+      z-index: 5;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      display: block;
+    }
+    .caption {
+      padding: 10px 15px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #555;
+      text-align: center;
+      background: #fafafa;
+      user-select: none;
+    }
+    .music-player-container {
+      max-width: 400px;
+      margin: 0 auto 20px auto;
+      text-align: center;
+      background: #fff;
+      padding: 15px 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    }
+    .music-player-container h2 {
+      margin: 0 0 10px 0;
+      font-weight: 700;
+      color: #222;
+      font-size: 1.2rem;
+      letter-spacing: 1.5px;
+      user-select: none;
+    }
+    audio {
+      width: 100%;
+      outline: none;
+      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      background: #fafafa;
+    }
+    @media (max-width: 480px) {
+      .gallery {
+        max-width: 90%;
+        gap: 15px;
+      }
+      .gallery-item img {
+        height: 200px;
+      }
+      .music-player-container {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Galeri Foto Kelas</h1>
+  <div class="gallery">
+    <div class="gallery-item"><img src="https://ibb.co/kgt39CH9" alt="Foto Kelas 1" /><div class="caption">Wali Kelas 9f</div></div>
+    <div class="gallery-item"><img src="https://ibb.co/9kx5TSyB" alt="Foto Kelas 2" /><div class="caption">Kenangan</div></div>
+    <div class="gallery-item"><img src="https://ibb.co/SDNZLwmk" alt="Foto Kelas 3" /><div class="caption">Kenangan</div></div>
+    <div class="gallery-item"><img src="https://ibb.co/93SHZ745" alt="Foto Kelas 4" /><div class="caption">Kenangan</div></div>
+    <div class="gallery-item"><img src="https://ibb.co/fY5b9Wm9" alt="Foto Kelas 5" /><div class="caption">Kenangan</div></div>
+    <div class="gallery-item"><img src="https://ibb.co/Kx3r2qN2" alt="Foto Kelas 6" /><div class="caption">Kenangan</div></div>
+    <div class="gallery-item"><img src="https://ibb.co/kgt39CH9" alt="Foto Kelas 7" /><div class="caption">Kenangan</div></div>
+    <div class="gallery-item"><img src="https://ibb.co/DfyyCSk6" alt="Foto Kelas 8" /><div class="caption">Foto Hari Guru</div></div>
+    <div class="gallery-item"><img src="https://jmp.sh/s/uNWFCFdDpiz4kCBV8ULI" alt="Foto Kelas 9" /><div class="caption">Cowo 9f</div></div>
+    <div class="gallery-item"><img src="https://ibb.co/CKRDcPWb" alt="Foto Kelas 10" /><div class="caption">Logo kelas 9f</div></div>
+    <h2>Terimakasih ©FadilNadifIbrahim</h2>
+    <audio id="background-music" controls autoplay loop muted preload="auto">
+      <source src="https://jmp.sh/s/jvJ84dRgINW6hn4Toazl" type="audio/mpeg" />
+      Browser Anda tidak mendukung elemen audio.
+    </audio>
+  </div>
 
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const audio = document.getElementById('background-music');
+      if(audio) {
+        audio.muted = false;
+        audio.play().catch(() => {
+          // Autoplay might be blocked, fallback silently
+        });
+      }
+    });
+  </script>
+</body>
+</html>
